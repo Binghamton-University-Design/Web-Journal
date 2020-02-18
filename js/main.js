@@ -13,6 +13,9 @@ $(document).ready(function() {
 		var me = $(this);
 		var nex = $(this).next();
 
+		var gutter = parseInt($(this).css("fontSize"))*2;
+		console.log(gutter);
+
 		$( ".overlay-holder .overlay .body" ).empty();
 		$(".overlay-holder").removeClass('active');
 		$(".overlay-holder").addClass('hidden');
@@ -33,7 +36,7 @@ $(document).ready(function() {
 
 		//window.scrollTo({top: 0, behavior: 'smooth'});
 		$('html,body').animate({
-        scrollTop: $(".overlay-holder").offset().top-100},
+        scrollTop: $(".overlay-holder").offset().top-gutter},
         'slow');
 
 	});
